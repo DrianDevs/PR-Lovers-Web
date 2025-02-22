@@ -1,0 +1,523 @@
+@charset "UTF-8";
+/**
+gap => determina el espacio que hay entre los elementos
+que tiene contenidos. Este espacio se aplica a todos los lados
+
+flex-direction => permite indicar la dirección y orden de los
+elementos, donde row los ordenará según la jerarquía de 
+izquierda a derecha, row-reverse al contrario, y column
+hará que los elementos se dispongan horizontalmente (row-reverse
+lo mismo pero orden contrario)
+
+flex-wrap => esta propiedad hace que cuando los elementos
+con su tamaño original no quepan, o no, en la línea se pasarán a 
+siguiente con el fin de modificar, o no su tamaño
+
+flex-flow => flex flow es una combinación de las propiedados
+flex-direction y flex-wrap donde nos permite manejar ambas
+propiedades a la vez
+
+MAIN AXIS (EJE X)
+justify-content => alinea los elementos del contenedor cuando
+estos elementos tienen espacio disponible en el eje x. Se puede
+usar para centrar (center), para centrar con espacios (space-between),
+que se alineen al principio (flex-start), al final (flex-end),
+con espacios en ambos lados (space-around), y con el mismo espacio
+entre todos los elementos (space-evenly)
+
+CROSS AXIS (EJE Y), PERO SE ALINEAN HORIZONTALMENTE
+align-items => esta propiedad permite alinear los elementos dentro
+del contenedor de diferentes formas: stretch mantiene el tamaño
+de los elemento; center los alinea en el centro horizontalmente 
+adaptando el tamaño al contenido del elemento; flex-start/end 
+los alineas por arriba/abajo adaptando el tamaño al contenido
+
+align-content => esta propiedad alinea los elementos de un contenedor
+verticalmente. Algunas propiedades como center permiten que los elementos
+queden juntos en el centro, flex-end y flex-start hacen que se junten al
+principio a final del contenedor, y space-around/between/evenly permite
+que queden alineados con spacios entre ellos
+
+flex-grow => cambiará el crecimiento que tendrá el elementos en comparación
+con los otros elementos
+
+flex-shrink => cambiará la reducción de tamaño que tendrá el elementos 
+en comparación con los otros elementos
+
+align-self => esta propiedad hace que el elemento se puede alinear de forma
+vertical (cross axis) de diferentes maneras
+*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+.seccion-rauw-alejandro {
+  overflow: auto;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.seccion-rauw-alejandro .izq {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  height: 70%;
+  width: 30%;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 3em;
+}
+.seccion-rauw-alejandro .izq .titulo {
+  font-family: "poppinsBold";
+  margin: 2em 0 0 2em;
+}
+.seccion-rauw-alejandro .izq img {
+  margin-left: 1em;
+  width: 80px;
+}
+.seccion-rauw-alejandro .izq .presentacion-rauw {
+  font-family: "poppinsRegular";
+  width: 85%;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+.seccion-rauw-alejandro .dcha {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  min-height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.seccion-rauw-alejandro .dcha img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.seccion-rauw-alejandro-discos {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+.seccion-rauw-alejandro-discos .izq-todo-de-ti {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  width: 35%;
+  height: 100vh;
+}
+.seccion-rauw-alejandro-discos .izq-todo-de-ti img {
+  mask-image: linear-gradient(to right, black 70%, transparent);
+  width: 100%;
+  height: 100%;
+}
+.seccion-rauw-alejandro-discos .dcha-discos {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .saturno {
+  padding: 2em;
+  width: 50%;
+  min-height: 50vh;
+  row-gap: 3em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .saturno .presentacion-saturno {
+  font-size: 1.5em;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .disco-saturno {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .disco-saturno img {
+  width: 100%;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .disco-cosa-nuestra {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .disco-cosa-nuestra img {
+  width: 100%;
+}
+.seccion-rauw-alejandro-discos .dcha-discos .cosa-nuestra {
+  padding: 2em;
+  width: 50%;
+  min-height: 50vh;
+  row-gap: 3em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+.seccion-rauw-alejandro-discos
+  .dcha-discos
+  .cosa-nuestra
+  .presentacion-cosa-nuestra {
+  font-size: 1.5em;
+}
+
+.seccion-bad-bunny {
+  color: white;
+  background-color: black;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: wrap column;
+}
+.seccion-bad-bunny .portada-bad-bunny {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  width: 100%;
+  height: 65vh;
+  background-image: url("/images/bad-bunny-4k.jpg");
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.seccion-bad-bunny .presentacion-bad-bunny {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.seccion-bad-bunny .presentacion-bad-bunny .texto-bad-bunny {
+  padding: 1em;
+  font-size: 2.5em;
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+.seccion-bad-bunny .presentacion-bad-bunny .texto-bad-bunny .autor {
+  width: 20em;
+  margin-right: 3em;
+  font-size: 0.75em;
+}
+.seccion-bad-bunny .presentacion-bad-bunny .ver-artista-bad-bunny {
+  align-self: center;
+  height: max-content;
+}
+
+.seccion-bad-bunny-disco {
+  color: white;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.seccion-bad-bunny-disco .portada-disco {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  padding: 5em;
+  min-height: 100vh;
+  min-width: 50%;
+  display: flex;
+}
+.seccion-bad-bunny-disco .portada-disco img {
+  border-radius: 30px;
+  width: 100%;
+}
+.seccion-bad-bunny-disco .titulo-vinilo {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 5em;
+}
+.seccion-bad-bunny-disco .titulo-vinilo .titulo-disco {
+  font-size: 4em;
+  text-align: right;
+  font-weight: bolder;
+  width: 100%;
+  height: 50%;
+}
+.seccion-bad-bunny-disco .titulo-vinilo .vinilo-disco {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.seccion-bad-bunny-disco .titulo-vinilo .vinilo-disco img {
+  border-radius: 30px;
+  width: 100%;
+}
+.seccion-bad-bunny-disco .ver-disco-dtmf {
+  align-self: flex-end;
+  margin-bottom: 5em;
+  height: max-content;
+  width: max-content;
+}
+
+button {
+  font-size: 30px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #fff;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+@media (max-width: 1200px) {
+  .seccion-rauw-alejandro,
+  .seccion-rauw-alejandro-discos,
+  .seccion-bad-bunny {
+    flex-direction: column;
+    height: auto;
+  }
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    width: 100%;
+    height: auto;
+  }
+  .seccion-rauw-alejandro-discos .dcha-discos {
+    display: flex;
+    flex-direction: column;
+  }
+  .seccion-bad-bunny .texto-bad-bunny {
+    font-size: 1.5em;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .seccion-rauw-alejandro .izq img,
+  .seccion-rauw-alejandro-discos img {
+    width: 60px;
+  }
+  .seccion-rauw-alejandro .presentacion-rauw,
+  .seccion-rauw-alejandro-discos .presentacion-saturno,
+  .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
+    font-size: 1.2em;
+    width: 90%;
+  }
+  .seccion-bad-bunny .texto-bad-bunny {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    padding: 1em;
+  }
+  .seccion-rauw-alejandro .izq img,
+  .seccion-rauw-alejandro-discos img {
+    width: 50px;
+  }
+  .seccion-rauw-alejandro .presentacion-rauw,
+  .seccion-rauw-alejandro-discos .presentacion-saturno,
+  .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
+    font-size: 1em;
+  }
+  button {
+    font-size: 20px;
+  }
+}
+
+.navbar {
+  transition: all 0.5s;
+}
+
+.navbar-scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#logo {
+  width: 200px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+section {
+  padding: 100px 200px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+}
+
+/* .home:before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+} */
+
+.home .content {
+  z-index: 888;
+  color: white;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.home .content h1 span {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.home .content p {
+  margin-bottom: 65px;
+}
+
+.home .content a {
+  background: #fff;
+  padding: 15px 35px;
+  color: black;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.home video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0, 5);
+  transition: 0.3 ease;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+#cosa-nuestra-logo {
+  width: 70%;
+  height: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */
