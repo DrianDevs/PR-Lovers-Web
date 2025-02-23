@@ -572,6 +572,10 @@ section {
   background-color: #121212;
   color: #eee;
 
+  #logo-footer .img{
+    width: 100%;
+    margin-left: -200px;
+  }
   // Si se usan clases de Bootstrap, sobreescribimos los colores de los textos
   .link-body-emphasis,
   .text-body-secondary {
@@ -580,10 +584,10 @@ section {
 
   // Opcional: personalizar los enlaces del footer
   a.nav-link {
-    color: white;
+    color: #aaa;
     transition: color 0.3s;
     &:hover {
-      color: white;
+      color: #fff;
     }
   }
 

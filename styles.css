@@ -520,16 +520,20 @@ section {
   padding: 3rem 1rem;
   margin-top: 3rem;
 }
+#footer #logo-footer .img {
+  width: 100%;
+  margin-left: -200px;
+}
 #footer .link-body-emphasis,
 #footer .text-body-secondary {
   color: #aaa !important;
 }
 #footer a.nav-link {
-  color: white;
+  color: #aaa;
   transition: color 0.3s;
 }
 #footer a.nav-link:hover {
-  color: white;
+  color: #fff;
 }
 #footer h5 {
   color: #fff;
