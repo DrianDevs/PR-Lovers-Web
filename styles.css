@@ -179,7 +179,10 @@ vertical (cross axis) de diferentes maneras
   flex-flow: column wrap;
   align-items: flex-start;
 }
-.seccion-rauw-alejandro-discos .dcha-discos .cosa-nuestra .presentacion-cosa-nuestra {
+.seccion-rauw-alejandro-discos
+  .dcha-discos
+  .cosa-nuestra
+  .presentacion-cosa-nuestra {
   font-size: 1.5em;
 }
 
@@ -395,14 +398,17 @@ button:after {
     font-size: 20px;
   }
 }
+body {
+  background-color: black;
+}
+
 .navbar {
   transition: all 0.5s;
 }
 
 .navbar-scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  background-color: black;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
@@ -484,11 +490,20 @@ section {
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   transition: 0.3s ease;
 }
+
+.slider-navigation {
+  .nav-btn {
+    &.active {
+      background: rgb(124, 8, 8);
+    }
+  }
+}
+
 .slider-navigation .nav-btn:not(:last-child) {
   margin-right: 20px;
 }
 .slider-navigation .nav-btn:hover {
-  transform: scale(1.2);
+  transform: scale(2);
 }
 
 #cosa-nuestra-logo {
@@ -603,7 +618,7 @@ section {
 
 .saturno {
   color: white;
-  background-color: #AFBFEB;
+  background-color: #afbfeb;
   min-height: 100vh;
   background: url("/images/fondo-saturno.png") no-repeat;
   background-size: cover;
@@ -673,7 +688,7 @@ section {
 
 .cosa-nuestra {
   color: white;
-  background-color: #452D1F;
+  background-color: #452d1f;
   min-height: 100vh;
   background: url("/images/fondo-cosa-nuestra.png") no-repeat;
   background-size: cover;

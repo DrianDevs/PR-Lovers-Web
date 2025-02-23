@@ -437,6 +437,10 @@ vertical (cross axis) de diferentes maneras
     }
   }
 
+  body {
+    background-color: black;
+  }
+
   // Header y Slider de Video
 
   .navbar {
@@ -444,9 +448,9 @@ vertical (cross axis) de diferentes maneras
   }
   
   .navbar-scrolled {
-    background-color: white;
-    color: black;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    background-color: black;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
+
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
@@ -539,7 +543,7 @@ vertical (cross axis) de diferentes maneras
       }
   
       &:hover {
-        transform: scale(1.2);
+        transform: scale(2);
       }
     }
   }
