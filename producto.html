@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="producto-styles.css" />
+    <script>
+      window.onload = () => {
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="producto">
+      <div class="imagen">
+        <img src="/images/dtmf-vinilo.jpg" alt="" />
+      </div>
+      <div class="detalles">
+        <div class="nombre-producto">
+          <p>DeBÍ TiRAR MáS FoTOS</p>
+        </div>
+        <div class="nombre-artista">
+          <p>Bad Bunny</p>
+        </div>
+        <div class="precio-producto">15,99€</div>
+        <div class="descripcion-producto">
+          <p>
+            Corillo, este es Bad Bunny. Mi nuevo disco Debí Tirar Más Fotos
+            tiene una edición especial que solo van a encontrar en PR Lovers.
+            Esto es pa’ los de verdad, así que si quieres el tuyo, ya tú sabe'.
+          </p>
+        </div>
+        <div class="boton">
+          <button class="btn">Añadir al carrito</button>
+        </div>
+        <div class="acordeon">
+          <button class="accordion">Tracklist</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+
+          <button class="accordion">Detalles del producto</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+
+          <button class="accordion">Especificaciones</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="seccion-productos-relacionados">
+      <div class="titulo">
+        <p>Productos relacionados</p>
+      </div>
+      <div class="productos">
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/cd-vice-versa.png" alt="" />
+          </div>
+          <div class="tipo">
+            <p>CD Vice Versa</p>
+          </div>
+          <div class="precio">
+            <p>15,99€</p>
+          </div>
+        </div>
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/cd-saturno.png" alt="" />
+          </div>
+          <div class="tipo">
+            <p>CD Saturno</p>
+          </div>
+          <div class="precio"><p>15,99€</p></div>
+        </div>
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/cd-cosa-nuestra.png" alt="" />
+          </div>
+          <div class="tipo">
+            <p>CD Cosa Nuestra</p>
+          </div>
+          <div class="precio">
+            <p>15,99€</p>
+          </div>
+        </div>
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/vinilo-vice-versa.png" alt="" />
+          </div>
+          <div class="tipo">Vinilo Vice Versa</div>
+          <div class="precio">
+            <p>25,99€</p>
+          </div>
+        </div>
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/vinilo-saturno.png" alt="" />
+          </div>
+          <div class="tipo">Vinilo Saturno</div>
+          <div class="precio">
+            <p>25,99€</p>
+          </div>
+        </div>
+        <div class="miProducto">
+          <div class="imagen">
+            <img src="/images/vinilo-cosa-nuestra.png" alt="" />
+          </div>
+          <div class="tipo">
+            <p>Vinilo Cosa nuestra</p>
+          </div>
+          <div class="precio">
+            <p>25,99€</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

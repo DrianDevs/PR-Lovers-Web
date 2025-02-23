@@ -508,6 +508,35 @@ section {
   width: 60%;
 }
 
+#footer {
+  background-color: #121212;
+  color: #eee;
+  border-top: 1px solid #333;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+#footer .link-body-emphasis,
+#footer .text-body-secondary {
+  color: #aaa !important;
+}
+#footer a.nav-link {
+  color: #aaa;
+  transition: color 0.3s;
+}
+#footer a.nav-link:hover {
+  color: #fff;
+}
+#footer h5 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+#footer p {
+  color: #bbb;
+}
+#footer .col {
+  margin-bottom: 1.5rem;
+}
+
 .video-slide {
   position: absolute;
   width: 100%;

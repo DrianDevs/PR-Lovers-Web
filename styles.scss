@@ -563,6 +563,47 @@ section {
   width: 60%;
 }
 
+#footer {
+  background-color: #121212;
+  color: #eee;
+
+  // Si se usan clases de Bootstrap, sobreescribimos los colores de los textos
+  .link-body-emphasis,
+  .text-body-secondary {
+    color: #aaa !important;
+  }
+
+  // Opcional: personalizar los enlaces del footer
+  a.nav-link {
+    color: #aaa;
+    transition: color 0.3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #bbb;
+  }
+
+  // Borde superior con tono oscuro
+  border-top: 1px solid #333;
+
+  // Espaciados
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+
+  // Adaptación para distintos tamaños de columnas
+  .col {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .video-slide {
   position: absolute;
   width: 100%;
