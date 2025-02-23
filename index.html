@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>PrLovers</title>
+    <title>PR Lovers</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="carrusel.css" />
     <script src="script.js"></script>
   </head>
   <body>
@@ -50,13 +51,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Rauw Alejandro</a>
+              <a class="nav-link" href="rauw_alejandro.html">Rauw Alejandro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Bad Bunny</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="bad_bunny.html">Bad Bunny</a>
             </li>
           </ul>
         </div>
@@ -86,7 +84,7 @@
           <br />Consigue el tuyo ahora mismo, junto a más productos exclusivos
           para ti, sólo en <strong>PR Lovers.</strong>
         </p>
-        <button>Explorar</button>
+        <button onclick="location.href='bad_bunny.html'">EXPLORAR</button>
       </div>
       <div class="content">
         <image
@@ -101,7 +99,7 @@
           quedes sin el tuyo.
         </p>
 
-        <button onclick="location.href='rauw_alejandro.html'">Explorar</button>
+        <button onclick="location.href='rauw_alejandro.html'">EXPLORAR</button>
       </div>
 
       <div class="slider-navigation">
@@ -159,7 +157,9 @@
             </p>
           </div>
           <div class="ver-disco-saturno">
-            <button>VER PRODUCTO</button>
+            <button onclick="location.href='rauw_alejandro.html'">
+              VER PRODUCTO
+            </button>
           </div>
         </div>
         <div class="disco-saturno">
@@ -187,7 +187,9 @@
             </p>
           </div>
           <div class="ver-disco-cosa-nuestra">
-            <button>VER PRODUCTO</button>
+            <button onclick="location.href='rauw_alejandro.html'">
+              VER PRODUCTO
+            </button>
           </div>
         </div>
       </div>
@@ -206,7 +208,7 @@
           </div>
         </div>
         <div class="ver-artista-bad-bunny">
-          <button>VER ARTISTA</button>
+          <button onclick="location.href='bad_bunny.html'">VER ARTISTA</button>
         </div>
       </div>
     </div>
@@ -230,7 +232,28 @@
         <button onclick="location.href='producto.html'">VER PRODUCTO</button>
       </div>
     </div>
-
+    <div class="banner">
+      <div class="slider" style="--quantity: 6">
+        <div class="item" style="--position: 1">
+          <img src="/images/vinilo-cosa-nuestra.png" alt="" />
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="/images/vinilo-saturno.png" alt="" />
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="/images/vinilo-vice-versa.png" alt="" />
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="/images/DTMF_vinilo.png" alt="" />
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="/images/UVST_vinilo.png" alt="" />
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="/images/YHLQMDLG_vinilo.png" alt="" />
+        </div>
+      </div>
+    </div>
     <!-- <footer
       id="footer"
       class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
@@ -309,6 +332,7 @@
         </ul>
       </div>
     </footer> -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

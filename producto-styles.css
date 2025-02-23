@@ -11,6 +11,7 @@ body {
 }
 
 .producto {
+  margin-top: 100px;
   height: 90vh;
   display: flex;
   flex-direction: row;
@@ -152,4 +153,6 @@ body {
 
 .miProducto .imagen img:hover {
   transform: scale(1.1);
-}/*# sourceMappingURL=producto-styles.css.map */
+}
+
+/*# sourceMappingURL=producto-styles.css.map */

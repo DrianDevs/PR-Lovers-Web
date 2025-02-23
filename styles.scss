@@ -51,6 +51,10 @@ vertical (cross axis) de diferentes maneras
   scrollbar-width: none;
 }
 
+body {
+  background-color: black;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -263,6 +267,7 @@ vertical (cross axis) de diferentes maneras
   height: 100vh;
   width: 100%;
   display: flex;
+  margin-bottom: 175px;
 
   .portada-disco {
     animation: appear linear;
@@ -575,10 +580,10 @@ section {
 
   // Opcional: personalizar los enlaces del footer
   a.nav-link {
-    color: #aaa;
+    color: white;
     transition: color 0.3s;
     &:hover {
-      color: #fff;
+      color: white;
     }
   }
 
@@ -905,4 +910,11 @@ section {
       }
     }
   }
+}
+
+.banner {
+  background-color: black;
+  display: flex;
+  margin-bottom: 0; /* O el valor deseado */
+  padding-bottom: 0;
 }

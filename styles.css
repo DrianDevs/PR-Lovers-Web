@@ -51,6 +51,10 @@ vertical (cross axis) de diferentes maneras
   scrollbar-width: none;
 }
 
+body {
+  background-color: black;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -240,6 +244,7 @@ vertical (cross axis) de diferentes maneras
   height: 100vh;
   width: 100%;
   display: flex;
+  margin-bottom: 175px;
 }
 .seccion-bad-bunny-disco .portada-disco {
   animation: appear linear;
@@ -520,11 +525,11 @@ section {
   color: #aaa !important;
 }
 #footer a.nav-link {
-  color: #aaa;
+  color: white;
   transition: color 0.3s;
 }
 #footer a.nav-link:hover {
-  color: #fff;
+  color: white;
 }
 #footer h5 {
   color: #fff;
@@ -804,6 +809,13 @@ section {
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
+}
+
+.banner {
+  background-color: black;
+  display: flex;
+  margin-bottom: 0; /* O el valor deseado */
+  padding-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
