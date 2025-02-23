@@ -179,10 +179,7 @@ vertical (cross axis) de diferentes maneras
   flex-flow: column wrap;
   align-items: flex-start;
 }
-.seccion-rauw-alejandro-discos
-  .dcha-discos
-  .cosa-nuestra
-  .presentacion-cosa-nuestra {
+.seccion-rauw-alejandro-discos .dcha-discos .cosa-nuestra .presentacion-cosa-nuestra {
   font-size: 1.5em;
 }
 
@@ -490,15 +487,6 @@ section {
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
   transition: 0.3s ease;
 }
-
-.slider-navigation {
-  .nav-btn {
-    &.active {
-      background: rgb(124, 8, 8);
-    }
-  }
-}
-
 .slider-navigation .nav-btn:not(:last-child) {
   margin-right: 20px;
 }
@@ -618,7 +606,7 @@ section {
 
 .saturno {
   color: white;
-  background-color: #afbfeb;
+  background-color: #AFBFEB;
   min-height: 100vh;
   background: url("/images/fondo-saturno.png") no-repeat;
   background-size: cover;
@@ -688,7 +676,7 @@ section {
 
 .cosa-nuestra {
   color: white;
-  background-color: #452d1f;
+  background-color: #452D1F;
   min-height: 100vh;
   background: url("/images/fondo-cosa-nuestra.png") no-repeat;
   background-size: cover;

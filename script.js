@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll(".nav-btn");
 
   var sliderNav = function (manual) {
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
     btns[manual].classList.add("active");
   };
 
