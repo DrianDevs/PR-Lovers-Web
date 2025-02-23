@@ -435,6 +435,10 @@ section {
   color: white;
   width: 70%;
   margin-top: 50px;
+  display: none;
+}
+.home .content.active {
+  display: block;
 }
 .home .content h1 {
   font-size: 4em;
@@ -449,7 +453,10 @@ section {
   font-weight: 600;
 }
 .home .content p {
+  font-size: 1.75em;
+  margin-right: 20px;
   margin-bottom: 65px;
+  word-wrap: break-word;
 }
 .home .content a {
   background: #fff;
@@ -497,9 +504,26 @@ section {
   background: rgb(124, 8, 8);
 }
 
+.video-slide {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at -10% 50%); /* Mueve el origen más a la izquierda */
+}
+.video-slide.active {
+  clip-path: circle(150% at 50% 50%); /* Expande desde el centro */
+  transition: clip-path 2s ease;
+}
+
 #cosa-nuestra-logo {
-  width: 70%;
+  width: 40%;
   height: 50%;
+  margin-bottom: 70px;
+}
+
+#dtmf-logo {
+  width: 25%;
+  height: 50%;
+  margin-bottom: 100px;
 }
 
 .scroll-container {
@@ -535,6 +559,10 @@ section {
 .cosa-nuestra.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#rauw-banner {
+  display: block;
 }
 
 .scroll-container .vice-versa {
