@@ -54,13 +54,11 @@ vertical (cross axis) de diferentes maneras
 @keyframes appear {
   from {
     opacity: 0;
-    -webkit-clip-path: inset(100% 100% 0 0);
-            clip-path: inset(100% 100% 0 0);
+    clip-path: inset(100% 100% 0 0);
   }
   to {
     opacity: 1;
-    -webkit-clip-path: inset(0 0 0 0);
-            clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
   }
 }
 .seccion-rauw-alejandro {
@@ -131,8 +129,7 @@ vertical (cross axis) de diferentes maneras
   height: 100vh;
 }
 .seccion-rauw-alejandro-discos .izq-todo-de-ti img {
-  -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
-          mask-image: linear-gradient(to right, black 70%, transparent);
+  mask-image: linear-gradient(to right, black 70%, transparent);
   width: 100%;
   height: 100%;
 }
@@ -205,8 +202,7 @@ vertical (cross axis) de diferentes maneras
   width: 100%;
   height: 65vh;
   background-image: url("/images/bad-bunny-4k.jpg");
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
-          mask-image: linear-gradient(to bottom, black 70%, transparent);
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -235,7 +231,6 @@ vertical (cross axis) de diferentes maneras
 }
 .seccion-bad-bunny .presentacion-bad-bunny .ver-artista-bad-bunny {
   align-self: center;
-  height: -moz-max-content;
   height: max-content;
 }
 
@@ -288,9 +283,7 @@ vertical (cross axis) de diferentes maneras
 .seccion-bad-bunny-disco .ver-disco-dtmf {
   align-self: flex-end;
   margin-bottom: 5em;
-  height: -moz-max-content;
   height: max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -406,10 +399,6 @@ button:after {
     font-size: 20px;
   }
 }
-body {
-  background-color: black;
-}
-
 .navbar {
   transition: all 0.5s;
 }
@@ -477,8 +466,7 @@ section {
   top: 0;
   left: 0;
   height: 98%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slider-navigation {
@@ -503,7 +491,10 @@ section {
   margin-right: 20px;
 }
 .slider-navigation .nav-btn:hover {
-  transform: scale(2);
+  transform: scale(1.2);
+}
+.slider-navigation .nav-btn.active {
+  background: rgb(124, 8, 8);
 }
 
 #cosa-nuestra-logo {
@@ -617,7 +608,7 @@ section {
 }
 .scroll-container .saturno {
   color: white;
-  background-color: #AFBFEB;
+  background-color: #afbfeb;
   min-height: 100vh;
   background: url("/images/fondo-saturno.png") no-repeat;
   background-size: cover;
@@ -686,7 +677,7 @@ section {
 }
 .scroll-container .cosa-nuestra {
   color: white;
-  background-color: #452D1F;
+  background-color: #452d1f;
   min-height: 100vh;
   background: url("/images/fondo-cosa-nuestra.png") no-repeat;
   background-size: cover;
@@ -752,4 +743,6 @@ section {
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
