@@ -309,6 +309,7 @@ vertical (cross axis) de diferentes maneras
     }
   }
 
+<<<<<<< HEAD
   .ver-disco-dtmf {
     align-self: flex-end;
     margin-bottom: 5em;
@@ -361,6 +362,43 @@ button:after {
   .seccion-rauw-alejandro,
   .seccion-rauw-alejandro-discos,
   .seccion-bad-bunny {
+=======
+  body {
+    background-color: black;
+  }
+
+  // Header y Slider de Video
+
+  .navbar {
+    transition: all 0.5s;
+  }
+  
+  .navbar-scrolled {
+    background-color: black;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
+
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+  
+  #logo {
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+  }
+  
+  section {
+    padding: 100px 200px;
+  }
+  
+  .home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+>>>>>>> 2da4a0924d08a0edef3eae53a46f29ae4574e82f
     flex-direction: column;
     height: auto;
   }
@@ -477,6 +515,7 @@ section {
 
   .content {
     z-index: 888;
+<<<<<<< HEAD
     color: white;
     width: 70%;
     margin-top: 50px;
@@ -492,6 +531,30 @@ section {
       span {
         font-size: 1.5em;
         font-weight: 600;
+=======
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+  
+    .nav-btn {
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+      transition: 0.3s ease;
+  
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+  
+      &:hover {
+        transform: scale(2);
+>>>>>>> 2da4a0924d08a0edef3eae53a46f29ae4574e82f
       }
     }
 
