@@ -504,6 +504,10 @@ section {
   background: rgb(124, 8, 8);
 }
 
+#img-cosa-nuestra {
+  width: 60%;
+}
+
 .video-slide {
   position: absolute;
   width: 100%;
