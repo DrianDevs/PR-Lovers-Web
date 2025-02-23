@@ -58,11 +58,13 @@ body {
 @keyframes appear {
   from {
     opacity: 0;
-    clip-path: inset(100% 100% 0 0);
+    -webkit-clip-path: inset(100% 100% 0 0);
+            clip-path: inset(100% 100% 0 0);
   }
   to {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
   }
 }
 .seccion-rauw-alejandro {
@@ -133,7 +135,8 @@ body {
   height: 100vh;
 }
 .seccion-rauw-alejandro-discos .izq-todo-de-ti img {
-  mask-image: linear-gradient(to right, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+          mask-image: linear-gradient(to right, black 70%, transparent);
   width: 100%;
   height: 100%;
 }
@@ -206,7 +209,8 @@ body {
   width: 100%;
   height: 65vh;
   background-image: url("/images/bad-bunny-4k.jpg");
-  mask-image: linear-gradient(to bottom, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+          mask-image: linear-gradient(to bottom, black 70%, transparent);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -235,6 +239,7 @@ body {
 }
 .seccion-bad-bunny .presentacion-bad-bunny .ver-artista-bad-bunny {
   align-self: center;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -288,7 +293,9 @@ body {
 .seccion-bad-bunny-disco .ver-disco-dtmf {
   align-self: flex-end;
   margin-bottom: 5em;
+  height: -moz-max-content;
   height: max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -478,7 +485,8 @@ section {
   top: 0;
   left: 0;
   height: 98%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slider-navigation {
@@ -514,7 +522,7 @@ section {
 }
 
 #footer {
-  background-color: #121212;
+  background-color: black;
   color: #eee;
   border-top: 1px solid #333;
   padding: 3rem 1rem;
@@ -549,11 +557,15 @@ section {
 .video-slide {
   position: absolute;
   width: 100%;
-  clip-path: circle(0% at -10% 50%); /* Mueve el origen más a la izquierda */
+  -webkit-clip-path: circle(0% at -10% 50%);
+          clip-path: circle(0% at -10% 50%); /* Mueve el origen más a la izquierda */
 }
 .video-slide.active {
-  clip-path: circle(150% at 50% 50%); /* Expande desde el centro */
+  -webkit-clip-path: circle(150% at 50% 50%);
+          clip-path: circle(150% at 50% 50%); /* Expande desde el centro */
+  transition: -webkit-clip-path 2s ease;
   transition: clip-path 2s ease;
+  transition: clip-path 2s ease, -webkit-clip-path 2s ease;
 }
 
 #cosa-nuestra-logo {
@@ -820,6 +832,4 @@ section {
   display: flex;
   margin-bottom: 0; /* O el valor deseado */
   padding-bottom: 0;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
