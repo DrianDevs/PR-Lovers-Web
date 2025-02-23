@@ -47,14 +47,20 @@ en comparación con los otros elementos
 align-self => esta propiedad hace que el elemento se puede alinear de forma
 vertical (cross axis) de diferentes maneras
 */
+* {
+  scrollbar-width: none;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
-    clip-path: inset(100% 100% 0 0);
+    -webkit-clip-path: inset(100% 100% 0 0);
+            clip-path: inset(100% 100% 0 0);
   }
   to {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
   }
 }
 .seccion-rauw-alejandro {
@@ -125,7 +131,8 @@ vertical (cross axis) de diferentes maneras
   height: 100vh;
 }
 .seccion-rauw-alejandro-discos .izq-todo-de-ti img {
-  mask-image: linear-gradient(to right, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+          mask-image: linear-gradient(to right, black 70%, transparent);
   width: 100%;
   height: 100%;
 }
@@ -198,7 +205,8 @@ vertical (cross axis) de diferentes maneras
   width: 100%;
   height: 65vh;
   background-image: url("/images/bad-bunny-4k.jpg");
-  mask-image: linear-gradient(to bottom, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+          mask-image: linear-gradient(to bottom, black 70%, transparent);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -227,6 +235,7 @@ vertical (cross axis) de diferentes maneras
 }
 .seccion-bad-bunny .presentacion-bad-bunny .ver-artista-bad-bunny {
   align-self: center;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -279,7 +288,9 @@ vertical (cross axis) de diferentes maneras
 .seccion-bad-bunny-disco .ver-disco-dtmf {
   align-self: flex-end;
   margin-bottom: 5em;
+  height: -moz-max-content;
   height: max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -463,7 +474,8 @@ section {
   top: 0;
   left: 0;
   height: 98%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slider-navigation {
@@ -531,7 +543,7 @@ section {
   transform: translateY(0);
 }
 
-.vice-versa {
+.scroll-container .vice-versa {
   color: white;
   background-color: #340475;
   min-height: 100vh;
@@ -544,14 +556,14 @@ section {
   flex-wrap: wrap;
   gap: 1em;
 }
-.vice-versa .titulo {
+.scroll-container .vice-versa .titulo {
   flex: 1;
   display: flex;
   margin: 0;
   align-items: center;
   justify-content: center;
 }
-.vice-versa .titulo .imagen {
+.scroll-container .vice-versa .titulo .imagen {
   max-width: 50vw;
   max-height: 20vh;
   flex: 1;
@@ -559,11 +571,11 @@ section {
   align-items: center;
   justify-content: center;
 }
-.vice-versa .titulo .imagen img {
+.scroll-container .vice-versa .titulo .imagen img {
   width: 100%;
   height: 100%;
 }
-.vice-versa .productos {
+.scroll-container .vice-versa .productos {
   flex: 2;
   display: flex;
   gap: 1em;
@@ -571,13 +583,13 @@ section {
   flex-flow: row wrap;
   padding: 1em 6em 5em;
 }
-.vice-versa .productos .producto {
+.scroll-container .vice-versa .productos .producto {
   min-width: inherit;
   flex: 1 1 700px;
   display: flex;
   flex-direction: column;
 }
-.vice-versa .productos .producto .imagen {
+.scroll-container .vice-versa .productos .producto .imagen {
   border-radius: 10px;
   background-color: #e1e3e0;
   flex: 8;
@@ -585,25 +597,24 @@ section {
   align-items: center;
   justify-content: center;
 }
-.vice-versa .productos .producto .imagen img {
+.scroll-container .vice-versa .productos .producto .imagen img {
   filter: drop-shadow(-24px 20px 20px rgb(89, 42, 246));
   width: 70%;
 }
-.vice-versa .productos .producto .tipo {
+.scroll-container .vice-versa .productos .producto .tipo {
   margin-top: 1em;
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
 }
-.vice-versa .productos .producto .precio {
+.scroll-container .vice-versa .productos .producto .precio {
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
 }
-
-.saturno {
+.scroll-container .saturno {
   color: white;
-  background-color: #AFBFEB;
+  background-color: #afbfeb;
   min-height: 100vh;
   background: url("/images/fondo-saturno.png") no-repeat;
   background-size: cover;
@@ -614,14 +625,14 @@ section {
   flex-wrap: wrap;
   gap: 1em;
 }
-.saturno .titulo {
+.scroll-container .saturno .titulo {
   flex: 1;
   display: flex;
   margin: 0;
   align-items: center;
   justify-content: center;
 }
-.saturno .titulo .imagen {
+.scroll-container .saturno .titulo .imagen {
   max-width: 50vw;
   max-height: 20vh;
   flex: 1;
@@ -629,11 +640,11 @@ section {
   align-items: center;
   justify-content: center;
 }
-.saturno .titulo .imagen img {
+.scroll-container .saturno .titulo .imagen img {
   width: 100%;
   height: 100%;
 }
-.saturno .productos {
+.scroll-container .saturno .productos {
   flex: 2;
   display: flex;
   gap: 1em;
@@ -641,13 +652,13 @@ section {
   flex-flow: row wrap;
   padding: 1em 6em 5em;
 }
-.saturno .productos .producto {
+.scroll-container .saturno .productos .producto {
   min-width: inherit;
   flex: 1 1 700px;
   display: flex;
   flex-direction: column;
 }
-.saturno .productos .producto .imagen {
+.scroll-container .saturno .productos .producto .imagen {
   border-radius: 10px;
   background-color: #e1e3e0;
   flex: 8;
@@ -655,25 +666,24 @@ section {
   align-items: center;
   justify-content: center;
 }
-.saturno .productos .producto .imagen img {
+.scroll-container .saturno .productos .producto .imagen img {
   filter: drop-shadow(-24px 20px 20px rgb(111, 212, 255));
   width: 70%;
 }
-.saturno .productos .producto .tipo {
+.scroll-container .saturno .productos .producto .tipo {
   margin-top: 1em;
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
 }
-.saturno .productos .producto .precio {
+.scroll-container .saturno .productos .producto .precio {
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
 }
-
-.cosa-nuestra {
+.scroll-container .cosa-nuestra {
   color: white;
-  background-color: #452D1F;
+  background-color: #452d1f;
   min-height: 100vh;
   background: url("/images/fondo-cosa-nuestra.png") no-repeat;
   background-size: cover;
@@ -684,14 +694,14 @@ section {
   flex-wrap: wrap;
   gap: 1em;
 }
-.cosa-nuestra .titulo {
+.scroll-container .cosa-nuestra .titulo {
   flex: 1;
   display: flex;
   margin: 0;
   align-items: center;
   justify-content: center;
 }
-.cosa-nuestra .titulo .imagen {
+.scroll-container .cosa-nuestra .titulo .imagen {
   max-width: 50vw;
   max-height: 20vh;
   flex: 1;
@@ -699,11 +709,11 @@ section {
   align-items: center;
   justify-content: center;
 }
-.cosa-nuestra .titulo .imagen img {
+.scroll-container .cosa-nuestra .titulo .imagen img {
   width: 100%;
   height: 100%;
 }
-.cosa-nuestra .productos {
+.scroll-container .cosa-nuestra .productos {
   flex: 2;
   display: flex;
   gap: 1em;
@@ -711,13 +721,13 @@ section {
   flex-flow: row wrap;
   padding: 1em 6em 5em;
 }
-.cosa-nuestra .productos .producto {
+.scroll-container .cosa-nuestra .productos .producto {
   min-width: inherit;
   flex: 1 1 700px;
   display: flex;
   flex-direction: column;
 }
-.cosa-nuestra .productos .producto .imagen {
+.scroll-container .cosa-nuestra .productos .producto .imagen {
   border-radius: 10px;
   background-color: #e1e3e0;
   flex: 8;
@@ -725,20 +735,18 @@ section {
   align-items: center;
   justify-content: center;
 }
-.cosa-nuestra .productos .producto .imagen img {
+.scroll-container .cosa-nuestra .productos .producto .imagen img {
   filter: drop-shadow(-24px 20px 20px rgb(71, 35, 0));
   width: 70%;
 }
-.cosa-nuestra .productos .producto .tipo {
+.scroll-container .cosa-nuestra .productos .producto .tipo {
   margin-top: 1em;
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
 }
-.cosa-nuestra .productos .producto .precio {
+.scroll-container .cosa-nuestra .productos .producto .precio {
   font-family: "poppinsRegular";
   font-size: clamp(15px, 5vw, 40px);
   flex: 1;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

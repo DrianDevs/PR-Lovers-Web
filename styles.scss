@@ -47,545 +47,550 @@ align-self => esta propiedad hace que el elemento se puede alinear de forma
 vertical (cross axis) de diferentes maneras
 */
 
+* {
+  scrollbar-width: none;
+}
+
 @keyframes appear {
-    from {
-      opacity: 0;
-      clip-path: inset(100% 100% 0 0);
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.seccion-rauw-alejandro {
+  overflow: auto;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  .izq {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    height: 70%;
+    width: 30%;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 3em;
+
+    .titulo {
+      font-family: "poppinsBold";
+      margin: 2em 0 0 2em;
     }
-    to {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
+
+    img {
+      margin-left: 1em;
+      width: 80px;
+    }
+
+    .presentacion-rauw {
+      font-family: "poppinsRegular";
+      width: 85%;
+      padding: 0.5em;
+      font-size: 1.5em;
     }
   }
-  
-  .seccion-rauw-alejandro {
-    overflow: auto;
-    background-color: black;
-    color: white;
-    min-height: 100vh;
+
+  .dcha {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    min-height: 70%;
+    width: 60%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-  
-    .izq {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      height: 70%;
-      width: 30%;
+    align-items: center;
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.seccion-rauw-alejandro-discos {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+
+  .izq-todo-de-ti {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 35%;
+    height: 100vh;
+
+    img {
+      mask-image: linear-gradient(to right, black 70%, transparent);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .dcha-discos {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    .saturno {
+      padding: 2em;
+      width: 50%;
+      min-height: 50vh;
+      row-gap: 3em;
       display: flex;
       flex-flow: column wrap;
-      row-gap: 3em;
-  
-      .titulo {
-        font-family: "poppinsBold";
-        margin: 2em 0 0 2em;
-      }
-  
-      img {
-        margin-left: 1em;
-        width: 80px;
-      }
-  
-      .presentacion-rauw {
-        font-family: "poppinsRegular";
-        width: 85%;
-        padding: 0.5em;
+      align-items: flex-start;
+
+      .presentacion-saturno {
         font-size: 1.5em;
       }
     }
-  
-    .dcha {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      min-height: 70%;
-      width: 60%;
+
+    .disco-saturno {
+      width: 50%;
+      height: 50vh;
       display: flex;
       justify-content: center;
-      align-content: center;
       align-items: center;
-  
+
       img {
-        border-radius: 20px;
         width: 100%;
-        height: 100%;
       }
     }
-  }
-  
-  .seccion-rauw-alejandro-discos {
-    background-color: black;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-  
-    .izq-todo-de-ti {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      width: 35%;
-      height: 100vh;
-  
-      img {
-        mask-image: linear-gradient(to right, black 70%, transparent);
-        width: 100%;
-        height: 100%;
-      }
-    }
-  
-    .dcha-discos {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      width: 70%;
-      height: 100vh;
+
+    .disco-cosa-nuestra {
+      width: 50%;
+      height: 50vh;
       display: flex;
-      flex-wrap: wrap;
-  
-      .saturno {
-        padding: 2em;
-        width: 50%;
-        min-height: 50vh;
-        row-gap: 3em;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: flex-start;
-  
-        .presentacion-saturno {
-          font-size: 1.5em;
-        }
-      }
-  
-      .disco-saturno {
-        width: 50%;
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        img {
-          width: 100%;
-        }
-      }
-  
-      .disco-cosa-nuestra {
-        width: 50%;
-        height: 50vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        img {
-          width: 100%;
-        }
-      }
-  
-      .cosa-nuestra {
-        padding: 2em;
-        width: 50%;
-        min-height: 50vh;
-        row-gap: 3em;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: flex-start;
-  
-        .presentacion-cosa-nuestra {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
-  
-  .seccion-bad-bunny {
-    color: white;
-    background-color: black;
-    max-width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-flow: wrap column;
-  
-    .portada-bad-bunny {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      width: 100%;
-      height: 65vh;
-      background-image: url("/images/bad-bunny-4k.jpg");
-      mask-image: linear-gradient(to bottom, black 70%, transparent);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: right;
-    }
-  
-    .presentacion-bad-bunny {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 30%;
-      width: 100%;
-      display: flex;
+      justify-content: center;
       align-items: center;
-  
-      .texto-bad-bunny {
-        padding: 1em;
-        font-size: 2.5em;
-        height: 30vh;
-        width: 80%;
-        display: flex;
-        align-content: flex-end;
-        align-items: flex-end;
-  
-        .autor {
-          width: 20em;
-          margin-right: 3em;
-          font-size: 0.75em;
-        }
+
+      img {
+        width: 100%;
       }
-  
-      .ver-artista-bad-bunny {
-        align-self: center;
-        height: max-content;
+    }
+
+    .cosa-nuestra {
+      padding: 2em;
+      width: 50%;
+      min-height: 50vh;
+      row-gap: 3em;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+
+      .presentacion-cosa-nuestra {
+        font-size: 1.5em;
       }
     }
   }
-  
-  .seccion-bad-bunny-disco {
-    color: white;
-    background-color: black;
-    height: 100vh;
+}
+
+.seccion-bad-bunny {
+  color: white;
+  background-color: black;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: wrap column;
+
+  .portada-bad-bunny {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 100%;
+    height: 65vh;
+    background-image: url("/images/bad-bunny-4k.jpg");
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+
+  .presentacion-bad-bunny {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
     width: 100%;
     display: flex;
-  
-    .portada-disco {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      padding: 5em;
-      min-height: 100vh;
-      min-width: 50%;
+    align-items: center;
+
+    .texto-bad-bunny {
+      padding: 1em;
+      font-size: 2.5em;
+      height: 30vh;
+      width: 80%;
       display: flex;
-  
+      align-content: flex-end;
+      align-items: flex-end;
+
+      .autor {
+        width: 20em;
+        margin-right: 3em;
+        font-size: 0.75em;
+      }
+    }
+
+    .ver-artista-bad-bunny {
+      align-self: center;
+      height: max-content;
+    }
+  }
+}
+
+.seccion-bad-bunny-disco {
+  color: white;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .portada-disco {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    padding: 5em;
+    min-height: 100vh;
+    min-width: 50%;
+    display: flex;
+
+    img {
+      border-radius: 30px;
+      width: 100%;
+    }
+  }
+
+  .titulo-vinilo {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 5em;
+
+    .titulo-disco {
+      font-size: 4em;
+      text-align: right;
+      font-weight: bolder;
+      width: 100%;
+      height: 50%;
+    }
+
+    .vinilo-disco {
+      height: 50%;
+      width: 100%;
+      display: flex;
+
       img {
         border-radius: 30px;
         width: 100%;
       }
     }
-  
-    .titulo-vinilo {
-      animation: appear linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
-      width: 30%;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      padding: 5em;
-  
-      .titulo-disco {
-        font-size: 4em;
-        text-align: right;
-        font-weight: bolder;
-        width: 100%;
-        height: 50%;
-      }
-  
-      .vinilo-disco {
-        height: 50%;
-        width: 100%;
-        display: flex;
-  
-        img {
-          border-radius: 30px;
-          width: 100%;
-        }
-      }
-    }
-  
-    .ver-disco-dtmf {
-      align-self: flex-end;
-      margin-bottom: 5em;
-      height: max-content;
-      width: max-content;
-    }
-  }
-  
-  button {
-    font-size: 30px;
-    color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-  }
-  
-  button:focus,
-  button:hover {
-    color: #fff;
-  }
-  
-  button:focus:after,
-  button:hover:after {
-    width: 100%;
-    left: 0%;
-  }
-  
-  button:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
-  
-  @media (max-width: 1200px) {
-    .seccion-rauw-alejandro,
-    .seccion-rauw-alejandro-discos,
-    .seccion-bad-bunny {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .seccion-rauw-alejandro .izq,
-    .seccion-rauw-alejandro .dcha,
-    .seccion-rauw-alejandro-discos .izq-todo-de-ti,
-    .seccion-rauw-alejandro-discos .dcha-discos,
-    .seccion-bad-bunny .portada-bad-bunny,
-    .seccion-bad-bunny .presentacion-bad-bunny {
-      width: 100%;
-      height: auto;
-    }
-  
-    .seccion-rauw-alejandro-discos .dcha-discos {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .seccion-bad-bunny .texto-bad-bunny {
-      font-size: 1.5em;
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .seccion-rauw-alejandro .izq,
-    .seccion-rauw-alejandro .dcha,
-    .seccion-rauw-alejandro-discos .izq-todo-de-ti,
-    .seccion-rauw-alejandro-discos .dcha-discos,
-    .seccion-bad-bunny .portada-bad-bunny,
-    .seccion-bad-bunny .presentacion-bad-bunny {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .seccion-rauw-alejandro .izq img,
-    .seccion-rauw-alejandro-discos img {
-      width: 60px;
-    }
-  
-    .seccion-rauw-alejandro .presentacion-rauw,
-    .seccion-rauw-alejandro-discos .presentacion-saturno,
-    .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
-      font-size: 1.2em;
-      width: 90%;
-    }
-  
-    .seccion-bad-bunny .texto-bad-bunny {
-      font-size: 1.2em;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .seccion-rauw-alejandro .izq,
-    .seccion-rauw-alejandro .dcha,
-    .seccion-rauw-alejandro-discos .izq-todo-de-ti,
-    .seccion-rauw-alejandro-discos .dcha-discos,
-    .seccion-bad-bunny .portada-bad-bunny,
-    .seccion-bad-bunny .presentacion-bad-bunny {
-      padding: 1em;
-    }
-  
-    .seccion-rauw-alejandro .izq img,
-    .seccion-rauw-alejandro-discos img {
-      width: 50px;
-    }
-  
-    .seccion-rauw-alejandro .presentacion-rauw,
-    .seccion-rauw-alejandro-discos .presentacion-saturno,
-    .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
-      font-size: 1em;
-    }
-  
-    button {
-      font-size: 20px;
-    }
   }
 
-  // Header y Slider de Video
+  .ver-disco-dtmf {
+    align-self: flex-end;
+    margin-bottom: 5em;
+    height: max-content;
+    width: max-content;
+  }
+}
 
-  .navbar {
-    transition: all 0.5s;
-  }
-  
-  .navbar-scrolled {
-    background-color: white;
-    color: black;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-  }
-  
-  #logo {
-    width: 200px;
-    height: 100px;
-    margin-left: 20px;
-  }
-  
-  section {
-    padding: 100px 200px;
-  }
-  
-  .home {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+button {
+  font-size: 30px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #fff;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+@media (max-width: 1200px) {
+  .seccion-rauw-alejandro,
+  .seccion-rauw-alejandro-discos,
+  .seccion-bad-bunny {
     flex-direction: column;
-    background: black;
-  
-    .content {
-      z-index: 888;
-      color: white;
-      width: 70%;
-      margin-top: 50px;
-  
-      h1 {
-        font-size: 4em;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        line-height: 75px;
-        margin-bottom: 40px;
-  
-        span {
-          font-size: 1.5em;
-          font-weight: 600;
-        }
-      }
-  
-      p {
-        margin-bottom: 65px;
-      }
-  
-      a {
-        background: #fff;
-        padding: 15px 35px;
-        color: black;
-        font-size: 1.1em;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 2px;
-      }
-    }
-  
-    video {
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 98%;
-      object-fit: cover;
-    }
+    height: auto;
   }
-  
-  .slider-navigation {
+
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    width: 100%;
+    height: auto;
+  }
+
+  .seccion-rauw-alejandro-discos .dcha-discos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .seccion-bad-bunny .texto-bad-bunny {
+    font-size: 1.5em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seccion-rauw-alejandro .izq img,
+  .seccion-rauw-alejandro-discos img {
+    width: 60px;
+  }
+
+  .seccion-rauw-alejandro .presentacion-rauw,
+  .seccion-rauw-alejandro-discos .presentacion-saturno,
+  .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
+    font-size: 1.2em;
+    width: 90%;
+  }
+
+  .seccion-bad-bunny .texto-bad-bunny {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-rauw-alejandro .izq,
+  .seccion-rauw-alejandro .dcha,
+  .seccion-rauw-alejandro-discos .izq-todo-de-ti,
+  .seccion-rauw-alejandro-discos .dcha-discos,
+  .seccion-bad-bunny .portada-bad-bunny,
+  .seccion-bad-bunny .presentacion-bad-bunny {
+    padding: 1em;
+  }
+
+  .seccion-rauw-alejandro .izq img,
+  .seccion-rauw-alejandro-discos img {
+    width: 50px;
+  }
+
+  .seccion-rauw-alejandro .presentacion-rauw,
+  .seccion-rauw-alejandro-discos .presentacion-saturno,
+  .seccion-rauw-alejandro-discos .presentacion-cosa-nuestra {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+
+// Header y Slider de Video
+
+.navbar {
+  transition: all 0.5s;
+}
+
+.navbar-scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#logo {
+  width: 200px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+section {
+  padding: 100px 200px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+
+  .content {
     z-index: 888;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(80px);
-    margin-bottom: 12px;
-  
-    .nav-btn {
-      width: 12px;
-      height: 12px;
-      background: white;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
-      transition: 0.3s ease;
-  
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-  
-      &:hover {
-        transform: scale(1.2);
+    color: white;
+    width: 70%;
+    margin-top: 50px;
+
+    h1 {
+      font-size: 4em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      line-height: 75px;
+      margin-bottom: 40px;
+
+      span {
+        font-size: 1.5em;
+        font-weight: 600;
       }
     }
-  }
-  
-  #cosa-nuestra-logo {
-    width: 70%;
-    height: 50%;
+
+    p {
+      margin-bottom: 65px;
+    }
+
+    a {
+      background: #fff;
+      padding: 15px 35px;
+      color: black;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+    }
   }
 
-  // Rauw Alejandro
+  video {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98%;
+    object-fit: cover;
+  }
+}
 
-  .scroll-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth; // Hace que el scroll sea más fluido
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+
+  .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
-  
-  .vice-versa,
-  .saturno,
-  .cosa-nuestra {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.6s ease-in-out; // Suaviza la aparición
-  }
-  
-  .vice-versa,
-  .saturno,
-  .cosa-nuestra {
-    opacity: 1;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .vice-versa.visible,
-  .saturno.visible,
-  .cosa-nuestra.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+}
+
+#cosa-nuestra-logo {
+  width: 70%;
+  height: 50%;
+}
+
+// Rauw Alejandro
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; // Hace que el scroll sea más fluido
+}
+
+.vice-versa,
+.saturno,
+.cosa-nuestra {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease-in-out; // Suaviza la aparición
+}
+
+.vice-versa,
+.saturno,
+.cosa-nuestra {
+  opacity: 1;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.vice-versa.visible,
+.saturno.visible,
+.cosa-nuestra.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-container {
   .vice-versa {
     color: white;
     background-color: #340475;
@@ -598,14 +603,14 @@ vertical (cross axis) de diferentes maneras
     align-items: stretch;
     flex-wrap: wrap;
     gap: 1em;
-  
+
     .titulo {
       flex: 1;
       display: flex;
       margin: 0;
       align-items: center;
       justify-content: center;
-  
+
       .imagen {
         max-width: 50vw;
         max-height: 20vh;
@@ -613,14 +618,14 @@ vertical (cross axis) de diferentes maneras
         display: flex;
         align-items: center;
         justify-content: center;
-  
+
         img {
           width: 100%;
           height: 100%;
         }
       }
     }
-  
+
     .productos {
       flex: 2;
       display: flex;
@@ -628,13 +633,13 @@ vertical (cross axis) de diferentes maneras
       min-height: 70vh;
       flex-flow: row wrap;
       padding: 1em 6em 5em;
-  
+
       .producto {
         min-width: inherit;
         flex: 1 1 700px;
         display: flex;
         flex-direction: column;
-  
+
         .imagen {
           border-radius: 10px;
           background-color: #e1e3e0;
@@ -642,20 +647,20 @@ vertical (cross axis) de diferentes maneras
           display: flex;
           align-items: center;
           justify-content: center;
-  
+
           img {
             filter: drop-shadow(-24px 20px 20px rgb(89, 42, 246));
             width: 70%;
           }
         }
-  
+
         .tipo {
           margin-top: 1em;
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
           flex: 1;
         }
-  
+
         .precio {
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
@@ -664,10 +669,10 @@ vertical (cross axis) de diferentes maneras
       }
     }
   }
-  
+
   .saturno {
     color: white;
-    background-color: #AFBFEB;
+    background-color: #afbfeb;
     min-height: 100vh;
     background: url("/images/fondo-saturno.png") no-repeat;
     background-size: cover;
@@ -677,14 +682,14 @@ vertical (cross axis) de diferentes maneras
     align-items: stretch;
     flex-wrap: wrap;
     gap: 1em;
-  
+
     .titulo {
       flex: 1;
       display: flex;
       margin: 0;
       align-items: center;
       justify-content: center;
-  
+
       .imagen {
         max-width: 50vw;
         max-height: 20vh;
@@ -692,14 +697,14 @@ vertical (cross axis) de diferentes maneras
         display: flex;
         align-items: center;
         justify-content: center;
-  
+
         img {
           width: 100%;
           height: 100%;
         }
       }
     }
-  
+
     .productos {
       flex: 2;
       display: flex;
@@ -707,13 +712,13 @@ vertical (cross axis) de diferentes maneras
       min-height: 70vh;
       flex-flow: row wrap;
       padding: 1em 6em 5em;
-  
+
       .producto {
         min-width: inherit;
         flex: 1 1 700px;
         display: flex;
         flex-direction: column;
-  
+
         .imagen {
           border-radius: 10px;
           background-color: #e1e3e0;
@@ -721,20 +726,20 @@ vertical (cross axis) de diferentes maneras
           display: flex;
           align-items: center;
           justify-content: center;
-  
+
           img {
             filter: drop-shadow(-24px 20px 20px rgb(111, 212, 255));
             width: 70%;
           }
         }
-  
+
         .tipo {
           margin-top: 1em;
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
           flex: 1;
         }
-  
+
         .precio {
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
@@ -743,10 +748,10 @@ vertical (cross axis) de diferentes maneras
       }
     }
   }
-  
+
   .cosa-nuestra {
     color: white;
-    background-color: #452D1F;
+    background-color: #452d1f;
     min-height: 100vh;
     background: url("/images/fondo-cosa-nuestra.png") no-repeat;
     background-size: cover;
@@ -756,14 +761,14 @@ vertical (cross axis) de diferentes maneras
     align-items: stretch;
     flex-wrap: wrap;
     gap: 1em;
-  
+
     .titulo {
       flex: 1;
       display: flex;
       margin: 0;
       align-items: center;
       justify-content: center;
-  
+
       .imagen {
         max-width: 50vw;
         max-height: 20vh;
@@ -771,14 +776,14 @@ vertical (cross axis) de diferentes maneras
         display: flex;
         align-items: center;
         justify-content: center;
-  
+
         img {
           width: 100%;
           height: 100%;
         }
       }
     }
-  
+
     .productos {
       flex: 2;
       display: flex;
@@ -786,13 +791,13 @@ vertical (cross axis) de diferentes maneras
       min-height: 70vh;
       flex-flow: row wrap;
       padding: 1em 6em 5em;
-  
+
       .producto {
         min-width: inherit;
         flex: 1 1 700px;
         display: flex;
         flex-direction: column;
-  
+
         .imagen {
           border-radius: 10px;
           background-color: #e1e3e0;
@@ -800,20 +805,20 @@ vertical (cross axis) de diferentes maneras
           display: flex;
           align-items: center;
           justify-content: center;
-  
+
           img {
             filter: drop-shadow(-24px 20px 20px rgb(71, 35, 0));
             width: 70%;
           }
         }
-  
+
         .tipo {
           margin-top: 1em;
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
           flex: 1;
         }
-  
+
         .precio {
           font-family: "poppinsRegular";
           font-size: clamp(15px, 5vw, 40px);
@@ -822,6 +827,4 @@ vertical (cross axis) de diferentes maneras
       }
     }
   }
-  
-  
-  
+}
