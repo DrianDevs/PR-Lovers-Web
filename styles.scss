@@ -437,6 +437,8 @@ vertical (cross axis) de diferentes maneras
     }
   }
 
+  // Header y Slider de Video
+
   .navbar {
     transition: all 0.5s;
   }
@@ -546,5 +548,280 @@ vertical (cross axis) de diferentes maneras
     width: 70%;
     height: 50%;
   }
+
+  // Rauw Alejandro
+
+  .scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; // Hace que el scroll sea más fluido
+  }
+  
+  .vice-versa,
+  .saturno,
+  .cosa-nuestra {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease-in-out; // Suaviza la aparición
+  }
+  
+  .vice-versa,
+  .saturno,
+  .cosa-nuestra {
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .vice-versa.visible,
+  .saturno.visible,
+  .cosa-nuestra.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .vice-versa {
+    color: white;
+    background-color: #340475;
+    min-height: 100vh;
+    background: url("/images/fondo-vice-versa.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1em;
+  
+    .titulo {
+      flex: 1;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+  
+      .imagen {
+        max-width: 50vw;
+        max-height: 20vh;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  
+    .productos {
+      flex: 2;
+      display: flex;
+      gap: 1em;
+      min-height: 70vh;
+      flex-flow: row wrap;
+      padding: 1em 6em 5em;
+  
+      .producto {
+        min-width: inherit;
+        flex: 1 1 700px;
+        display: flex;
+        flex-direction: column;
+  
+        .imagen {
+          border-radius: 10px;
+          background-color: #e1e3e0;
+          flex: 8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          img {
+            filter: drop-shadow(-24px 20px 20px rgb(89, 42, 246));
+            width: 70%;
+          }
+        }
+  
+        .tipo {
+          margin-top: 1em;
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+  
+        .precio {
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+      }
+    }
+  }
+  
+  .saturno {
+    color: white;
+    background-color: #AFBFEB;
+    min-height: 100vh;
+    background: url("/images/fondo-saturno.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1em;
+  
+    .titulo {
+      flex: 1;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+  
+      .imagen {
+        max-width: 50vw;
+        max-height: 20vh;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  
+    .productos {
+      flex: 2;
+      display: flex;
+      gap: 1em;
+      min-height: 70vh;
+      flex-flow: row wrap;
+      padding: 1em 6em 5em;
+  
+      .producto {
+        min-width: inherit;
+        flex: 1 1 700px;
+        display: flex;
+        flex-direction: column;
+  
+        .imagen {
+          border-radius: 10px;
+          background-color: #e1e3e0;
+          flex: 8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          img {
+            filter: drop-shadow(-24px 20px 20px rgb(111, 212, 255));
+            width: 70%;
+          }
+        }
+  
+        .tipo {
+          margin-top: 1em;
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+  
+        .precio {
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+      }
+    }
+  }
+  
+  .cosa-nuestra {
+    color: white;
+    background-color: #452D1F;
+    min-height: 100vh;
+    background: url("/images/fondo-cosa-nuestra.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1em;
+  
+    .titulo {
+      flex: 1;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+  
+      .imagen {
+        max-width: 50vw;
+        max-height: 20vh;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  
+    .productos {
+      flex: 2;
+      display: flex;
+      gap: 1em;
+      min-height: 70vh;
+      flex-flow: row wrap;
+      padding: 1em 6em 5em;
+  
+      .producto {
+        min-width: inherit;
+        flex: 1 1 700px;
+        display: flex;
+        flex-direction: column;
+  
+        .imagen {
+          border-radius: 10px;
+          background-color: #e1e3e0;
+          flex: 8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          img {
+            filter: drop-shadow(-24px 20px 20px rgb(71, 35, 0));
+            width: 70%;
+          }
+        }
+  
+        .tipo {
+          margin-top: 1em;
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+  
+        .precio {
+          font-family: "poppinsRegular";
+          font-size: clamp(15px, 5vw, 40px);
+          flex: 1;
+        }
+      }
+    }
+  }
+  
   
   
