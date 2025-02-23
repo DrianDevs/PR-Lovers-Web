@@ -179,10 +179,7 @@ vertical (cross axis) de diferentes maneras
   flex-flow: column wrap;
   align-items: flex-start;
 }
-.seccion-rauw-alejandro-discos
-  .dcha-discos
-  .cosa-nuestra
-  .presentacion-cosa-nuestra {
+.seccion-rauw-alejandro-discos .dcha-discos .cosa-nuestra .presentacion-cosa-nuestra {
   font-size: 1.5em;
 }
 
@@ -398,7 +395,6 @@ button:after {
     font-size: 20px;
   }
 }
-
 .navbar {
   transition: all 0.5s;
 }
@@ -431,25 +427,12 @@ section {
   flex-direction: column;
   background: black;
 }
-
-/* .home:before {
-  z-index: 777;
-  content: "";
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-} */
-
 .home .content {
   z-index: 888;
   color: white;
   width: 70%;
   margin-top: 50px;
 }
-
 .home .content h1 {
   font-size: 4em;
   font-weight: 900;
@@ -458,16 +441,13 @@ section {
   line-height: 75px;
   margin-bottom: 40px;
 }
-
 .home .content h1 span {
   font-size: 1.5em;
   font-weight: 600;
 }
-
 .home .content p {
   margin-bottom: 65px;
 }
-
 .home .content a {
   background: #fff;
   padding: 15px 35px;
@@ -477,13 +457,12 @@ section {
   text-decoration: none;
   border-radius: 2px;
 }
-
 .home video {
-  z-index: 000;
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 98%;
   object-fit: cover;
 }
 
@@ -496,21 +475,18 @@ section {
   transform: translateY(80px);
   margin-bottom: 12px;
 }
-
 .slider-navigation .nav-btn {
   width: 12px;
   height: 12px;
   background: white;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0, 5);
-  transition: 0.3 ease;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
 }
-
 .slider-navigation .nav-btn:not(:last-child) {
   margin-right: 20px;
 }
-
 .slider-navigation .nav-btn:hover {
   transform: scale(1.2);
 }
